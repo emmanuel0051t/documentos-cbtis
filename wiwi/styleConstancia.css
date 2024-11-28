@@ -1,0 +1,125 @@
+/* Estilos globales */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Encabezado principal */
+h1 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+/* Contenedores de certificados */
+.certificates-container div {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.certificates-container button {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto 0; /* Centra el botón horizontalmente */
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.certificates-container button:hover {
+    transform: translateY(-2px);
+}
+
+.certificates-container .btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.certificates-container .btn.rounded {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.certificates-container .btn.rounded:hover {
+    background-color: #1E88E5;
+}
+
+
+/* Botones */
+.btn-container {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-text {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.btn.rounded {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.btn.rounded:hover {
+    background-color: #1E88E5;
+}
+
+/* Texto en verde */
+.text-green {
+    color: #fff;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .certificates-container {
+        width: 90%;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

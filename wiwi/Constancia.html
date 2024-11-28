@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constancia de Docente</title>
+    <link rel="stylesheet" href="styleConstancia.css">
+</head>
+
+<body>
+    <h1>Constancia de Docente y Diploma</h1>
+    <div class="certificates-container">
+        <div class="constancia" id="constancia">
+            <h2 id="nombre-docente"></h2>
+            <p>Se certifica que el docente mencionado ha participado activamente en las actividades académicas de la institución.</p>
+            <p>Esta constancia se expide en la fecha: <span id="fecha-actual"></span></p>
+            <button class="btn" onclick="redirigirConstancia()">Ver Constancia</button>
+        </div>
+    
+        <div class="diploma" id="diploma">
+            <h2 id="nombre-docente-diploma"></h2>
+            <p>Por haber ganado la copa de fútbol en la que participó con el equipo de la escuela del CBTIS.</p>
+            <p>Fecha: <span id="fecha-actual-diploma"></span></p>
+            <button class="btn rounded" onclick="redirigirDiploma()">Ver Diploma</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para obtener valores de la URL
+        function getQueryVariable(variable) {
+            const query = window.location.search.substring(1); // Parte después de "?"
+            const variables = query.split("&"); // Divide los parámetros
+            for (let i = 0; i < variables.length; i++) {
+                const pair = variables[i].split("="); // Divide en clave=valor
+                if (pair[0] === variable) {
+                    return decodeURIComponent(pair[1]); // Decodifica el valor
+                }
+            }
+            return null;
+        }
+
+        // Obtener el nombre y la fecha desde la URL
+        const nombreDocente = getQueryVariable("nombre") || "Nombre del Docente";
+        const fechaActual = getQueryVariable("fecha") || new Date().toLocaleDateString();
+
+        // Mostrar datos en los elementos correspondientes
+        document.getElementById('nombre-docente').innerText = nombreDocente;
+        document.getElementById('nombre-docente-diploma').innerText = nombreDocente;
+        document.getElementById('fecha-actual').innerText = fechaActual;
+        document.getElementById('fecha-actual-diploma').innerText = fechaActual;
+
+        // Funciones para redirigir
+        function redirigirConstancia() {
+            // Redirige agregando el nombre como parámetro
+            window.location.href = `diploma.php?nombre=${encodeURIComponent(nombreDocente)}`;
+        }
+
+        function redirigirDiploma() {
+            // Redirige agregando el nombre como parámetro
+            window.location.href = `documento.php?nombre=${encodeURIComponent(nombreDocente)}`;
+        }
+    </script>
+</body>
+
+</html>

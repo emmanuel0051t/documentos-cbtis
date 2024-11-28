@@ -1,0 +1,18 @@
+.firma-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.firma{
+font-family:Arial,sans-serif;
+text-align:center;
+padding:20px;
+}
+
+.firma hr{
+    border-top: 1px solid black;
+    width: auto;
+    margin: 0 auto;
+
+}

@@ -1,0 +1,108 @@
+/* Reset de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo y estilo global */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Estilo para el encabezado */
+header {
+  background-color: #005f6b;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+/* Enlace para agregar docente */
+a {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #005f6b;
+}
+
+/* Estilo para la tabla */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado de la tabla */
+th {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-weight: normal;
+}
+
+/* Celdas de la tabla */
+td {
+  background-color: #fff;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Fila al pasar el ratón */
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilo para los enlaces dentro de la tabla (eliminar) */
+td a {
+  text-decoration: none;
+  color: #e74c3c;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+td a:hover {
+  color: #c0392b;
+}
+
+/* Estilo para cuando no hay docentes */
+.no-docentes {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Para hacer la tabla más responsiva */
+@media (max-width: 768px) {
+  table {
+      font-size: 0.9rem;
+  }
+
+  th, td {
+      padding: 8px;
+  }
+
+  a {
+      font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,66 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo del encabezado */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #005f6b;
+}
+
+/* Contenedor de los botones de docentes */
+.docente-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo de los botones */
+.docente-container button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: capitalize;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover en los botones */
+.docente-container button:hover {
+    background-color: #005f6b;
+    transform: translateY(-5px);
+}
+
+/* Estilo del texto dentro de los botones */
+.docente-container button span {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .docente-container button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
