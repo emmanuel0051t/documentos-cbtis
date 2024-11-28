@@ -11,11 +11,10 @@
 
     <?php
      // Conexión a la base de datos
-     $servername = "localhost";
-     $username = "root";
-     $password = "";
-     $dbname = "documentacion docentes cbtis 169";
- 
+    $servername = "sql3.freesqldatabase.com";
+$username = "sql3748075";
+$password = "ptlwjFgaww";
+$dbname = "sql3748075";
      $conn = new mysqli($servername, $username, $password, $dbname);
 
      if ($conn->connect_error) {
